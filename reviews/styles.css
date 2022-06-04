@@ -95,3 +95,7 @@ article #job {
   margin-right: 10px;
   cursor: pointer;
 }
+
+.button-container button:active {
+  color: rgb(70, 165, 224);
+}
