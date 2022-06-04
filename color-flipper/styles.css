@@ -64,9 +64,5 @@ nav {
   border-radius: 5px;
 }
 
- h4 , .color {
-  color: rgb(75, 211, 211);
-}
-
-h4 { cursor: pointer; }
+h4 {color: rgb(75, 211, 211); cursor: pointer; }
 
