@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+:root {
+  --light: 60;
+  /* the threshold at which colors are considered "light." Range: integers from 0 to 100,
+recommended 50 - 70 */
+  --threshold: 65;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden; /* to hide scrollbars */
+  margin: 0;
+  background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+ }
+
+.container {
+  display: flex;
+  width: 80vw;
+}
+
+.panel {
+  /* background-size: auto 90%; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+
+   --switch: calc((var(--light) - var(--threshold)) * -100%);
+  color: hsl(0, 0%, var(--switch));
+}
+
+.panel.active {
+  flex: 3;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+  
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+.one {
+  background-image: url('https://images3.alphacoders.com/666/thumbbig-666312.webp')
+}
+
+.two {
+  background-image: url('https://images4.alphacoders.com/123/thumbbig-123036.webp')
+}
+
+.three {
+  background-image: url('https://images5.alphacoders.com/474/thumbbig-474474.webp')
+}
+
+.four {
+  background-image: url('https://images.alphacoders.com/104/thumbbig-1049984.webp')
+}
+
+.five {
+  background-image: url('https://images8.alphacoders.com/707/thumbbig-707447.webp')
+}
